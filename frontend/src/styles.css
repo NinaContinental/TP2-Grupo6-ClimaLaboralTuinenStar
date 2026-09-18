@@ -1,0 +1,166 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: white;
+  padding: 12px 24px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-usuario {
+  opacity: 0.8;
+  font-size: 0.9em;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-login {
+  max-width: 400px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.tarjeta-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.tarjeta-login input {
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.aviso {
+  color: #0f766e;
+}
+
+.nota-anonimato {
+  font-size: 0.85em;
+  color: #64748b;
+  font-style: italic;
+}
+
+.barra-progreso {
+  background: #e2e8f0;
+  border-radius: 8px;
+  height: 10px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.barra-progreso-relleno {
+  background: #1e293b;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.opciones-likert {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.opciones-likert label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acciones-formulario {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tarjeta-confirmacion {
+  text-align: center;
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+.icono-check {
+  font-size: 48px;
+  color: #16a34a;
+}
+
+.tabla-dashboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: white;
+}
+
+.tabla-dashboard th,
+.tabla-dashboard td {
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  text-align: left;
+}
+
+.alerta-alto {
+  border-left: 6px solid #dc2626;
+}
+
+.alerta-medio {
+  border-left: 6px solid #f59e0b;
+}
+
+.alerta-bajo {
+  border-left: 6px solid #16a34a;
+}
