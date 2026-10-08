@@ -61,3 +61,13 @@ Y crea al menos un usuario TI con contraseña ya hasheada con Bcrypt (puedes gen
 | `src/controllers/` | Aplicación (casos de uso: login, cerrar campaña, generar alertas) |
 | `src/middleware/` | Aplicación (reglas transversales: autenticación y roles) |
 | `src/config/db.js` | Infraestructura (conexión a SQL Server) |
+
+## Pruebas unitarias (Jest + Supertest)
+
+```
+cd backend
+npm install
+npm test               # corre las 51 pruebas
+npm run test:coverage  # con reporte de cobertura
+```
+Las pruebas simulan la base de datos (tests/helpers/mockDb.js); no necesitan SQL Server.
