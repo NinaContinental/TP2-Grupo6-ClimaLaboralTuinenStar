@@ -51,3 +51,14 @@ Abre `http://localhost:5173`.
 - Manejo de expiración del token JWT (hoy, si expira, las peticiones fallan con
   401 pero no se redirige automáticamente al login — se puede agregar un
   interceptor de respuesta en `src/api/client.js` para eso).
+
+## Diseño de la interfaz (rediseño visual)
+
+- Estilo sobrio institucional (azul marino + acento verde azulado) con semáforo de riesgo bajo/medio/alto.
+- **Modo claro/oscuro**: botón en la barra superior y en el login; la preferencia se guarda en `localStorage` (`tema`) solo cuando el usuario la cambia; por defecto sigue el tema del sistema.
+- **Gráficos sin dependencias nuevas**: barras y marcadores de riesgo hechos con CSS (`components/EscalaRiesgo.jsx`), con las mismas zonas que `regla_umbral` (0–2 bajo, 2–3 medio, 3–4 alto).
+- El nivel de riesgo nunca se indica solo con color: siempre lleva icono y texto.
+- Accesibilidad: enlace "Saltar al contenido", foco visible, diálogos `<dialog>` nativos, `prefers-reduced-motion`.
+- Encuesta: una pregunta por pantalla, barra de progreso, atajo de teclado 1–5, versión móvil en columna.
+- Solo cambia el frontend; no se tocó la API ni el backend (las 51 pruebas siguen vigentes). No requiere instalar paquetes: `npm run dev`.
+- La tipografía (Public Sans) se carga desde Google Fonts; sin internet se usa la fuente del sistema.

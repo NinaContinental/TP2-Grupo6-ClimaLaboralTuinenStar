@@ -21,7 +21,10 @@ export function AuthProvider({ children }) {
   }
 
   function logout() {
-    localStorage.clear();
+    // Solo se borra la sesion; asi la preferencia de tema (modo claro/oscuro) se conserva.
+    localStorage.removeItem('token');
+    localStorage.removeItem('nombre_completo');
+    localStorage.removeItem('rol');
     setUsuario(null);
   }
 
