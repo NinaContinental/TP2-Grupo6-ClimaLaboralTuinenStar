@@ -1,9 +1,28 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-tema="claro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Medicion y Analisis de Clima Laboral</title>
+    <meta name="color-scheme" content="light dark" />
+    <title>Clima Laboral · Instituto Tuinen Star</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Aplica el tema guardado (o el del sistema) antes de pintar, para evitar el parpadeo -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('tema');
+          if (t !== 'claro' && t !== 'oscuro') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+          }
+          document.documentElement.setAttribute('data-tema', t);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
